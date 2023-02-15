@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+The firs log has the value of x that been declared within the function scope, the second log has a global scope.
 ## Question 2
 
 Take a look at the following code:
@@ -34,7 +34,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
-
+Undefined, because x value hasn't been passed to the function or declared inside it.
+Undefined, because y value only declared within the function scope.
 ## Question 3
 
 Take a look at the following code:
@@ -62,3 +63,11 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+f1(x): return 10
+
+console.log(x): it will console log 9, it gits the value of x from the global scope not from the function
+
+f2(y): return 10
+
+console.log(y):it will console log { x: 9 } , it gits the value of y from the global scope not from the function

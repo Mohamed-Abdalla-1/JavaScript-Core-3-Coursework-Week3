@@ -6,3 +6,18 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function print(ord) {
+  let sum = 0
+  console.log("QTY     ITEM                TOTAL");
+  ord.forEach(i=>{
+    let{itemName,quantity,unitPrice}=i
+    console.log(
+      `${quantity.toString().padEnd(10)}${itemName.padEnd(18)}${unitPrice.toFixed(2)}`
+    );
+    sum += unitPrice
+  })
+  console.log("\n"+"Total: "+sum)
+}
+
+print(order);
